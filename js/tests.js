@@ -2,12 +2,12 @@ function testName() {
     try {
         if (name == '') {
             console.error("You didn't provide a name");
-            student.score -= 10;
+            student.score -= 5;
         } else {
             //'%c TEST FOR multiply() PASSES', 'color: green'
             log("%c The name you entered is " + name, 'color: green');
             student.name = name;
-            student.score += 10;
+            student.score += 5;
 
             log('Answer the following problems at your own pace by calling the following quiz functions: ');
             
@@ -57,7 +57,7 @@ function adminStringifyReverse(arr) {
 }
 function testArrayLoop(looper) {
     if (looper() != adminStringify(myArray)) {
-        console.error("Your array function isn't returning the reverse of the myArray variable");
+        console.error("Your array function isn't returning the string of the myArray variable");
         student.score -= 10;
     } else {
         let output = adminStringify(looper);
@@ -86,10 +86,13 @@ function testObj(obj = myPizza) {
         } catch (e) {
             log(e);
             console.error("Your pizza object wasn't created correctly");
+            student.score -= 25;
         }
     }
     if (check == 5) {
         log('%c Your Pizza object is correct', 'color: green');
+        student.score += 25;
+        
     }
 }
 
@@ -108,11 +111,21 @@ function testOrder(ord) {
     }
     if (check == 3) {
         log('%c Your order object is correct', 'color: green');
+        student.score += 20;
     }
 }
 
-function testConstructors(piz, ord, ) {
-    testObj(piz);
-    testOrder(ord);
+function testConstructors(piz, ord) {
+    try {
+        let p = new piz();
+        let o = new ord();
+        
+        testObj(p);
+        testOrder(o);
+        student.score += 40;
+    } catch(e) {
+        log(e);
+        console.error("Your constructor isn't creating properly formatted objects");
+    }
     
 }

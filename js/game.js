@@ -5,12 +5,12 @@ let student = {};
 student.score = 0;
 
 const quiz = {};
-quiz.functions = nameFun; //10
-quiz.array = arrayFun; //
-quiz.array2 = arrayLoopFun;
-quiz.array3 = arrayLoopBackFun
-quiz.objects = objectFun; //20
-quiz.constructor = constructorFun; //30
+quiz.functions = nameFun; //5
+quiz.array = arrayFun; //10
+quiz.array2 = arrayLoopFun; //10
+quiz.array3 = arrayLoopBackFun//10
+quiz.objects = objectFun; //25
+quiz.constructor = constructorFun; //40
 /**/
 quiz.grade = function() {
     console.clear();
@@ -46,7 +46,7 @@ function arrayLoopFun() {
 }
 
 function arrayLoopBackFun() {
-    log('Create a function and use a loop to output the contents of the array in reverse');
+    log('Create a function and use a loop to output the contents of the array in a string that is reversed');
     log("To verify, run the testArrayLoopRev() function with your function's name as a parameter");
 }
 
@@ -57,6 +57,7 @@ function objectFun() {
     log('Create an object representation of your favorite pizza and call it myPizza.');
     log('Required properties include: toppings (array), sauce (string), size (string), crust (string), and cost (int)');
     log('Set all object properties to lowercase!')
+    log('To verify, run the testObj function. Your object is an optional parameter')
     //toppings, sauce, size, crust, cost
 }
 
@@ -66,6 +67,10 @@ function constructorFun() {
     log('Required properties for orders include: pizza (array), order status (string) ~ for example: cooking / out for delivery / delivered ~');
     log('The order objects should also have a method that can update the status of the order');
     log('Set all object properties to lowercase!')
+    // log('To verify, run the testOrder function ')
+    log('To verify, run the testConstructors function. ') 
+    //test both pizza and order constructors by creating a 
+    // new object based on the function parameters
 }
 
 
