@@ -56,19 +56,19 @@ function arrayLoopBackFun() {
 function objectFun() {
     log('Create an object representation of your favorite pizza and call it myPizza.');
     log('Required properties include: toppings (array), sauce (string), size (string), crust (string), and cost (int)');
-    log('Set all object properties to lowercase!')
-    log('To verify, run the testObj function. Your object is an optional parameter')
+    log('Set all object properties to lowercase!');
+    log('To verify, run the testObj function. Your object is an optional parameter');
     //toppings, sauce, size, crust, cost
 }
 
 function constructorFun() {
-    log('Create an object contructor to create multiple kinds of pizza.')
+    log('Create an object contructor to create multiple kinds of pizza.');
     log('Also, create an object constructor that can be used to create multiple orders.');
     log('Required properties for orders include: pizza (array), order status (string) ~ for example: cooking / out for delivery / delivered ~');
     log('The order objects should also have a method that can update the status of the order');
-    log('Set all object properties to lowercase!')
+    log('Set all object properties to lowercase!');
     // log('To verify, run the testOrder function ')
-    log('To verify, run the testConstructors function. ') 
+    log('To verify, run the testConstructors function with your Pizza constructor and Order constructor as parameters'); 
     //test both pizza and order constructors by creating a 
     // new object based on the function parameters
 }

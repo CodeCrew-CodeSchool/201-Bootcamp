@@ -97,21 +97,25 @@ function testObj(obj = myPizza) {
 }
 
 function testOrder(ord) {
-    let props = ['pizza', 'status', 'update'];
+    let props = ['pizzas', 'status', 'update'];
     let check = 0;
-    for (let i = 0; i < props.length; i++) {
-        try {
-           if (ord[props[i]] != undefined && typeof ord[props[2]] == 'function') {
-            check++;
-           }
-        } catch (e) {
-            log(e);
-            console.error("Your order object wasn't created correctly");
-        }
+    try {
+        for (let i = 0; i < props.length; i++) {
+            log(i);
+            if (ord[props[i]] != undefined && typeof ord[props[2]] == 'function') {
+                check++;
+                log(check)
+            }
+            } 
+    } catch (e) {
+        log(e);
+        console.error("Your order object wasn't created correctly");
     }
     if (check == 3) {
         log('%c Your order object is correct', 'color: green');
         student.score += 20;
+    } else {
+        console.error("Your order object wasn't created correctly");
     }
 }
 
