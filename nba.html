@@ -6,93 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA</title>
     <script src="js/phaser.js"></script>
+    <link href="css/nba-styles.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>Code School Project Ball</h1>
-
-    <h3>Create a new HTML page.</h3>
-        <p>Give it a custom title, add 1 image, 1 text element, and add a custom CSS and JS file to the page</p>
-    <h3>In your Javascript</h3>
-        <p>Define an Object Constructor for a Basketball Player</p>
-        <p>They need the following properties:</p>
-            <ul>
-                <li>Name, </li>
-                <li>Age,</li>  
-                <li>Height,</li>
-                <li>Weight, </li>
-                <li>2Pt Shooting Percentage, </li>
-                <li>3Pt Shooting Percentage, </li>
-                <li>Free Throw Shooting Percentage</li>
-            </ul>
-        <p>They also need the following methods:</p>
-            <ul>
-                <li>Dribble,</li> 
-                <li>Shoot(Parameter for Free Throw/2pt Field Goal/3pt attempt)</li>
-                
-                    For the Shoot method, utilize the player percentages to influence your algorithm for shooting. A 35% shooter should be able to make any shot base on a random number that generates lower than 35 for example
-                
-                <li>Pass</li>
-            </ul>
-                <br/>
-            
-    <h3>Stretch Goals</h3>
-        <ul>
-            <li>
-                Render a basketball in canvas
-            </li>
-            <li>
-                Animate or move the ball when the Player methods run
-            </li>
-            <li>
-                Tie the different Player Methods to HTML buttons
-            </li>
-            <li>
-                Add a score variable that increments based on successful shots
-            </li>
-            <li>
-                Display the score in the HTML
-            </li>
-        </ul>
-
-        <img src="assets/ball01.png"/>
-    <div width="200" height="200"><canvas id="phaser-example"></canvas></div>
-    <script>
-    var config = {
-        type: Phaser.AUTO,
-        width: 300,
-        height: 200,
-        physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 200 }
-            }
-        },
-        scene: {
-            preload: preload,
-            create: create
-        }
-    };
-
-    var game = new Phaser.Game(config);
-
-    function preload ()
-    {
-
-        this.load.image('ball', 'assets/ball01.png');
-    }
-
-    function create ()
-    {
+    <div class="container">
+        <div class="instructions">
+            <h1>Code School Project Ball</h1>
+    
+            <h3>Create a new HTML page.</h3>
+                <p>Give it a custom title, add 1 image, 1 text element, and add a custom CSS and JS file to the page</p>
+            <h3>In your Javascript</h3>
+                <p>Define an Object Constructor for a Basketball Player</p>
+                <p>They need the following properties:</p>
+                    <ul>
+                        <li>Name, </li>
+                        <li>Age,</li>  
+                        <li>Height,</li>
+                        <li>Weight, </li>
+                        <li>2Pt Shooting Percentage, </li>
+                        <li>3Pt Shooting Percentage, </li>
+                        <li>Free Throw Shooting Percentage</li>
+                    </ul>
+                <p>They also need the following methods:</p>
+                    <ul>
+                        <li>Dribble,</li> 
+                        <li>Shoot(Parameter for Free Throw/2pt Field Goal/3pt attempt)</li>
+                        
+                            For the Shoot method, utilize the player percentages to influence your algorithm for shooting. A 35% shooter should be able to make any shot base on a random number that generates lower than 35 for example
+                        
+                        <li>Pass</li>
+                    </ul>
+                        <br/>
+                    
+            <h3>Stretch Goals</h3>
+                <ul>
+                    <li>
+                        Render a basketball in canvas
+                    </li>
+                    <li>
+                        Animate or move the ball when the Player methods run
+                    </li>
+                    <li>
+                        Tie the different Player Methods to HTML buttons
+                    </li>
+                    <li>
+                        Add a score variable that increments based on successful shots
+                    </li>
+                    <li>
+                        Display the score in the HTML
+                    </li>
+                </ul>
         
-        var logo = this.physics.add.image(400, 100, 'ball');
+        </div>
+        <div class="canvas">
+            <!-- <img src="assets/ball01.png"/> -->
+            <canvas id="phaser-example"></canvas>
+        </div>
         
-        logo.setVelocity(100, 200);
-        logo.setBounce(1, 1);
-        logo.setCollideWorldBounds(true);
+        
+    </div>
 
-    }
-    </script>
-
-    <!-- <script src="js/ball.js"></script> -->
+    <script src="js/ball.js"></script>
 </body>
 </html>
